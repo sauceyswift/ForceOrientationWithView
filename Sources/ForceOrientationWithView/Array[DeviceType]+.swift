@@ -9,8 +9,8 @@ import Foundation
 
 extension Array where Element == DeviceType {
     
-    static var all: [DeviceType] { [.iphone, .ipad] }
-    static var iphone: [DeviceType] { [.iphone] }
-    static var ipad: [DeviceType] { [.ipad] }
+    public static var all: [DeviceType] { [.iphone, .ipad] }
+    public static var iphone: [DeviceType] { [.iphone] }
+    public static var ipad: [DeviceType] { [.ipad] }
     
 }
