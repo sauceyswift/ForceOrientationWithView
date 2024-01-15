@@ -77,7 +77,7 @@ struct RotateYourDeviceView: View {
             }
             .padding()
             .onAppear() {
-                toggleState(forceState: false)
+                toggleState(forceState: true)
             }
             .onReceive(timer, perform: { _ in
                 toggleState()
