@@ -8,17 +8,17 @@
 import Foundation
 
 
-enum DeviceType: String {
+public enum DeviceType: String {
     case iphone
     case ipad
 }
 
-enum DeviceOrientation: String {
+public enum DeviceOrientation: String {
     case portrait
     case landscape
 }
 
-enum SubtitleType {
+public enum SubtitleType {
     case standard
     case custom(text: String)
     case none

@@ -9,7 +9,7 @@ import SwiftUI
 
 extension View {
     
-    func forceOrientation(
+    public func forceOrientation(
         toBe orientation: DeviceOrientation,
         for device: DeviceType,
         overlayBackgroundColor: Color = .accentColor,
