@@ -83,6 +83,8 @@ struct RotateYourDeviceView: View {
                 toggleState()
             })
         }
+        .toolbar(.hidden, for: .navigationBar)
+        .navigationBarBackButtonHidden()
     }
     
     private func toggleState(forceState: Bool? = nil) {
