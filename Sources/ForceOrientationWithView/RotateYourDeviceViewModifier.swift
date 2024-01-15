@@ -18,7 +18,7 @@ struct RotateYourDeviceViewModifier: ViewModifier {
     var isMac: Bool { ProcessInfo.processInfo.isiOSAppOnMac }
     
     let rotateTo: DeviceOrientation
-    let deviceType: DeviceType
+    let deviceTypes: [DeviceType]
     let bgColor: Color
     let fontColor: Color
     let subtitle: SubtitleType
@@ -28,9 +28,9 @@ struct RotateYourDeviceViewModifier: ViewModifier {
             content
             if isMac {
                 // do nothing
-            } else if isPhone && deviceType == .iphone {
+            } else if isPhone && deviceTypes.contains(where: { $0 == .iphone}) {
                 iPhoneOverlay
-            } else if isIPad && deviceType == .ipad {
+            } else if isIPad && deviceTypes.contains(where: { $0 == .ipad}) {
                 iPadOverlay
             }
         }

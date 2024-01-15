@@ -11,7 +11,7 @@ extension View {
     
     public func forceOrientation(
         toBe orientation: DeviceOrientation,
-        for device: DeviceType,
+        for devices: [DeviceType],
         overlayBackgroundColor: Color = .accentColor,
         overlayFontColor: Color = .white,
         overlaySubtitle: SubtitleType = .standard
@@ -19,7 +19,7 @@ extension View {
         self.modifier(
             RotateYourDeviceViewModifier(
                 rotateTo: orientation,
-                deviceType: device,
+                deviceTypes: devices,
                 bgColor: overlayBackgroundColor,
                 fontColor: overlayFontColor,
                 subtitle: overlaySubtitle

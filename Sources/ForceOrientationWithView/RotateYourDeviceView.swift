@@ -106,6 +106,34 @@ struct RotateYourDeviceView: View {
     
 }
 
+// MARK: Previews
+
 #Preview {
-    RotateYourDeviceView(rotateTo: .landscape, deviceType: .iphone, fontColor: .white)
+    Button(action: { print("clicked!") }, label: { Rectangle().ignoresSafeArea() })
+    .forceOrientation(toBe: .portrait, for: [.ipad])
+}
+
+#Preview {
+    Button(action: { print("clicked!") }, label: { Rectangle().ignoresSafeArea() })
+        .forceOrientation(toBe: .landscape, for: [.ipad])
+}
+
+#Preview {
+    Button(action: { print("clicked!") }, label: { Rectangle().ignoresSafeArea() })
+        .forceOrientation(toBe: .landscape, for: [.ipad, .iphone])
+}
+
+#Preview {
+    Button(action: { print("clicked!") }, label: { Rectangle().ignoresSafeArea() })
+        .forceOrientation(toBe: .portrait, for: [.ipad, .iphone])
+}
+
+#Preview {
+    Button(action: { print("clicked!") }, label: { Rectangle().ignoresSafeArea() })
+        .forceOrientation(toBe: .portrait, for: [.iphone])
+}
+
+#Preview {
+    Button(action: { print("clicked!") }, label: { Rectangle().ignoresSafeArea() })
+        .forceOrientation(toBe: .landscape, for: [.iphone])
 }
