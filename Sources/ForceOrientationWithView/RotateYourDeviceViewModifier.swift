@@ -30,7 +30,6 @@ struct RotateYourDeviceViewModifier: ViewModifier {
                 // do nothing
             } else if isPhone && deviceTypes.contains(where: { $0 == .iphone}) {
                 iPhoneOverlay
-                    .ignoresSafeArea()
             } else if isIPad && deviceTypes.contains(where: { $0 == .ipad}) {
                 iPadOverlay
             }
