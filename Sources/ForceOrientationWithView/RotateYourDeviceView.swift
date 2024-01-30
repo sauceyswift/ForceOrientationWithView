@@ -64,7 +64,7 @@ struct RotateYourDeviceView: View {
                     .fgColor(fontColor)
                     .font(.subheadline)
                     .multilineTextAlignment(.center)
-                Image(curImageName)
+                Image(curImageName, bundle: .module)
                     .resizable()
                     .scaledToFit()
                     .rotationEffect(.degrees(rotationAngle))
@@ -72,7 +72,7 @@ struct RotateYourDeviceView: View {
                     .resizable()
                     .scaledToFit()
                     .fgColor(fontColor)
-                    .frame(maxWidth: 100)
+                    .frame(maxWidth: 80)
                     .padding()
             }
             .padding()
